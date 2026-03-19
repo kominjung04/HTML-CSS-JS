@@ -1,20 +1,49 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
 
- <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>Document</title>
- <script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>입력 양식 태그</title>
+  <script>
   </script>
- <!-- Google Material Icons -->
+  <!-- Google Material Icons -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 </head>
 
 <body>
-<h1>미디어 관련 태그</h1>
-  <span class="material-icons icon">home</span>돌아가기</a>
+  <h1>입력 양식 태그</h1>
+  <a href="index.html"><span class="material-icons icon">home</span>돌아가기</a>
   <hr>
+  <form action="index.html" method="get">
+    <fieldset>
+      <legend>입력 양식 태그 종류</legend>
+      <div>
+        <label for="subject">제목</label>
+        <input type="text" id="subject" name="subject">
+      </div>
+      <div>
+        <label for="password">비밀번호</label>
+        <input type="password" name="pw" id="password">
+      </div>
+      <div>
+        <input type="radio" id="male" name="gender" value="남">
+        <label for="male">남</label>
+        <input type="radio" id="female" name="gender" value="여">
+        <label for="female">여</label>
+      </div>
+      <div>
+        <input type="button" value="작성button">
+        <input type="submit" value="작성submit">
+      </div>
+    </fieldset>
+  </form>
+  <input type="text" name="etc" id="etc">
+
+  <a href="index.html?artcle=naver&no1234">naver</a>
+
 </body>
+
 </html>
