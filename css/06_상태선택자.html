@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
+ <!-- Google Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+ <script>
+  function disableText(){
+    const noti = document.querySelector("#notice");
+    noti.disabled = !noti.disabled; 
+  }
+</script>
+ 
+<style>
+  #choice:checked~input[type=text]{
+    background-color: rgb(243, 151, 151)
+  }
+  #name:focus{
+    background-color: blueviolet;
+  }
+  /* #view:checked~label{
+    display: none;
+  } */
+   #notice:disabled~#result{
+    color: red;
+   }
+</style>
+</head>
+
+<body>
+<h1>상태선택자</h1>
+<p>checked, focus, disabled</p>
+<a href="/"><span class="material-icons icon">home</span>돌아가기</a>
+<hr>
+<div>
+  <label for ="choice">checked선택</label>
+  <input type="checkbox" id="choice">
+  <input type="text">
+</div>
+<input type="text" name="name" id="name">
+<div>
+  <label for ="choice">선택 후 disabled</label><br>
+  <input type="checkbox" id="view" onclick="disableText()">
+  <input type="text" name="notice" id="notice">
+  <label id="result">경고</label>
+</div>
+
+
+</body>
+</html>
+
