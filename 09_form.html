@@ -21,28 +21,78 @@
     <fieldset>
       <legend>입력 양식 태그 종류</legend>
       <div>
-        <label for="subject">제목</label>
-        <input type="text" id="subject" name="subject">
+        <label for="no">번호</label>
+        <input type="text" id="no" name="no" value="0001" readonly>
+        <input type="hidden" name="key" value="aws" readonly>
       </div>
+
+      <div>
+        <label for="subject">제목</label>
+        <input type="text" id="subject" name="subject" value="홍길동" required placeholder="제목을 입력하세요">
+      </div>
+
       <div>
         <label for="password">비밀번호</label>
-        <input type="password" name="pw" id="password">
+        <input type="password" name="pw" id="password" placeholder="비밀번호를 입력하세요">
       </div>
+
       <div>
-        <input type="radio" id="male" name="gender" value="남">
+        <input type="radio" id="male" name="gender" value="남" checked>
         <label for="male">남</label>
         <input type="radio" id="female" name="gender" value="여">
         <label for="female">여</label>
       </div>
+
+      <div>
+        <input type="checkbox" name="hobby" id="chk_hobby_game" value="game" checked>
+        <label for="chk_hobby_game">게임</label>
+        <input type="checkbox" name="hobby" id="chk_hobby_chess" value="chess">
+        <label for="chk_hobby_game">체스</label>
+        <input type="checkbox" name="hobby" id="chk_hobby_movie" value="movie">
+        <label for="chk_hobby_game">영화</label>
+      </div>
+
+      <div>
+        <label for="email">이메일
+          <input type="text" name="email" id="email" disabled>
+        </label>
+      </div>
+      
+      <div>
+        <label>휴대폰
+        <select name="mobile" id="mobile">
+          <option value="">선택하세요</option>
+          <option value="010" selected>010</option>
+          <option value="011">011</option>
+        </select></label>
+        <input type="number" name="mobile01" id="mobile01" maxlength="4">
+        <input type="text" name="mobile02" id="mobile02" maxlength="4">
+      </div>
+
+      <div>
+        <label for="bigo">
+          <textarea name="bigo" id="bigo" rows="6" placeholder="비고"></textarea>
+        </label>
+      </div>
+
+      <div><label for="startday">시작일</label>
+      <input type="date" name="startday" id="startday">
+      <input type="time" name="time" id="time">
+      </div>
+
       <div>
         <input type="button" value="작성button">
-        <input type="submit" value="작성submit">
+        <input type="submit" value="작성submit"><br>
+        <button type="button">Button</button>
+        <button type="reset">Reset</button>
+        <button type="submit">Submit</button>
       </div>
+
     </fieldset>
   </form>
-  <input type="text" name="etc" id="etc">
 
   <a href="index.html?artcle=naver&no1234">naver</a>
+<br><br><br>
 
 </body>
 
