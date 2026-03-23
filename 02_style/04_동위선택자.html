@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
+ <script>
+  </script>
+ <!-- Google Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<style>
+  input[type="radio"]~label{
+    background-color: aqua;
+  }
+  input[type="radio"]+label{
+    background-color: yellowgreen;
+  }
+</style>
+</head>
+
+<body>
+<h1>동위선택자</h1>
+  <p>같은 레벨에서 뒤에 나오는 태그를 선택</p>
+  <p> ~ : 선택자의 같은 레벨 뒤에 있는 모든 태그를 선택</p>
+  <p> + : 선택자의 같은 레벨 바로 뒤에 있는 태그만 선택</p>
+  <a href="/"><span class="material-icons icon">home</span>돌아가기</a>
+  <hr>
+  <label for="">pre label</label><br>
+  <input type="radio" name="choice" id="on">
+  <label for="on">On</label>
+  <input type="radio" name="choice" id="off">
+  <label for="off">Off</label>
+  <input type="text" name="name" id="name">
+  <label for="name">name 1</label>
+  <label for="name">name 2</label>
+  <div>
+    <label for="">div label1</label><br>
+    <label for="">div label2</label>
+  </div>
+</body>
+</html>
+
