@@ -17,4 +17,5 @@ React + Spring + AWS 풀스택 과정 학습 내용을 정리한 레포입니다
  
 - CSS 속성 정리
   - 글자 속성
-  -    
+  - background 속성
+  - box 속성
