@@ -13,6 +13,8 @@
       width: 150px;
       height: 150px;
       position: relative;
+      overflow: scroll;/* 부모의 태그를 넘어섰을 때 처리하기 위한 옵션(hidden,scroll,auto,visible(default)) */
+      overflow-x: scroll; /*scroll 적용 시 옵션*/
     }
     .box{
       width: 100px;
@@ -21,7 +23,7 @@
     }
     .box:nth-child(1){
       background-color: red;
-      top:10px;left: 10px; z-index: 1;
+      top:10px;left: 10px; z-index: 3;
     }
     .box:nth-child(2){
       background-color: green;
@@ -29,7 +31,7 @@
     }
     .box:nth-child(3){
       background-color: blue;
-      top:90px;left: 90px; z-index: 3;
+      top:90px;left: 90px; z-index: 1;
     }
   </style>
 </head>
