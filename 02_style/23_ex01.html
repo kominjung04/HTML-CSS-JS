@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>position속성</title>
+  <!--웹 폰트를 html에 적용할 때-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=frame_exclamation" />
+  <style>
+    #outbox{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    #box {
+      height: 500px;
+      width: 250px;
+      border: 1px solid black;
+      border-radius: 10px;
+      box-shadow: 2px  0  5px gray,-2px 0 5px gray;
+    }
+
+    #image {
+      display: flex;
+      justify-content: center;
+    }
+
+    #title {
+      padding: 30px;
+      font-weight: bold;
+      text-align: center;
+      font-size: 25px;
+    }
+
+    #text {
+      text-align: center;
+      font-size: 16px;
+    }
+  </style>
+
+</head>
+
+<body>
+  <h1>ID 카드 만들기</h1>
+  <p>실습예제</p>
+  <a href="/"><span class="material-icons icon">home</span>돌아가기</a>
+  <hr>
+  <div id="outbox">
+    <div id="box">
+      <div id="title">ID Card</div>
+      <div id="image"><img src="/images/100x100.svg" alt="증명사진"></div>
+      <div>
+        <p id="text">대통령은 내우·외환·천재·지변 또는 중대한 재정·경제상의 위기에 있어서 국가의 안전보장 또는 공공의 안녕질서를 유지하기 위하여 긴급한 조치가 필요하고 국회의 집회를 기다릴 여유가 없을 때에 한하여 최소한으로 필요한 재정·경제상의 처분을 하거나 이에 관하여 법률의 효력을 가지는 명령을 발할 수 있다.</p>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
