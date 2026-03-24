@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>mobile</title>
+  <!--웹 폰트를 html에 적용할 때-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <style>
+    p{ font-size: 12pt;}
+
+     @media screen {
+      body{ background: greenyellow;}
+    } 
+
+    @media print {
+      body{ background: rgb(161, 161, 190);}
+    }
+
+    @media (max-width: 600px) {
+      body{background: blue;}
+      .box-wrap{
+        background-color: white;
+        flex-direction: column;
+      }
+    }
+    
+    .box-wrap{ display: flex; gap: 10px;}
+    .box{
+      flex:1;
+      background: orange;
+      padding: 30px;text-align: center;}
+  </style>
+</head>
+
+<body>
+  <h1>반응형 웹구성(Responsive Web)</h1>
+  <p>화면 크기에 따라 자동으로 변화된 모습을 보여줌</p>
+  <p>viewport 메타 태그, flex, @media</p>
+  <a href="/"><span class="material-icons icon">home</span>돌아가기</a>
+  <hr>
+  <div class="box-wrap">
+    <div class="box">box1</div>
+    <div class="box">box2</div>
+    <div class="box">box3</div>
+  </div>
+  <p>명령·규칙 또는 처분이 헌법이나 법률에 위반되는 여부가 재판의 전제가 된 경우에는 대법원은 이를 최종적으로 심사할 권한을 가진다. 국가는 법률이 정하는 바에 의하여 재외국민을 보호할 의무를 진다. 감사원은 원장을 포함한 5인 이상 11인 이하의 감사위원으로 구성한다. 대통령은 취임에 즈음하여 다음의 선서를 한다. 국회는 국가의 예산안을 심의·확정한다. 국무총리는 국회의 동의를 얻어 대통령이 임명한다. 국가는 과학기술의 혁신과 정보 및 인력의 개발을 통하여 국민경제의 발전에 노력하여야 한다. 대한민국의 영토는 한반도와 그 부속도서로 한다. 국채를 모집하거나 예산외에 국가의 부담이 될 계약을 체결하려 할 때에는 정부는 미리 국회의 의결을 얻어야 한다.</p>
+</body>
+
+</html>
