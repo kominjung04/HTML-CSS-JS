@@ -29,7 +29,7 @@
 
 <body>
   <h1>자바스크립트변수</h1>
-  <p>변수의 할당과 명명법, 종류</p>
+  <p>변수의 할당과 명명법, 종류 / console 창 확인</p>
   <a href="/"><span class="material-icons icon">home</span>돌아가기</a>
   <hr>
   <h3>변수의 명명법</h3>
@@ -123,7 +123,7 @@
       <li>특징: 선언은 상단으로, 초기값은 undefined로, 에러는 안나게,</li>
       <li>var은 호이스팅을 하게 되면 undefined로 처리 되지만, const 과 let는 error 발생 </li>
       <span>그렇다고, let 과 const가 호이스팅이 안되는 것은 아님,단지 접근만 안됨.</span>
-      <li>함수 또한 호이스팅 함, 함수는 undefined 발생X</li>
+      <li>함수 또한 호이스팅 발생, 함수는 undefined 발생X,결과나옴</li>
   </ul>
   <script>
     //var의 호이스팅
@@ -136,7 +136,14 @@
     //let,const의 호이스팅
     //console.log("y:" + y); //Reference Error(참조에러) 발생
     let y = 10; //TDZ(Temporal Dead Zone: 일시적 사각지대)
-    console.log("y:" + y); 
+    console.log("y:" + y);
+
+    //함수 호이스팅
+    add3()
+    function add3() {
+      console.log("add3")
+    }
+
   </script>
   <table>
     <thead>
@@ -188,6 +195,24 @@
     </tbody>
   </table>
 
+  <h3>var의 Scope</h3>
+  <script>
+    if (true) { var ScopeVar = 10; }
+    console.log("ScopeVar: " + ScopeVar) //함수외는 전역변수
+    function temp() {
+      var scopeFnVar = 20;
+    }
+    console.log(scopeFnVar) //함수안에서만 유효
+  </script>
+  <h3>let,const의 Scope</h3>
+  <script>
+    if (true) { let Scopelet = 10; }
+    console.log("Scopelet: " + Scopelet) //블록안에서만 유효 
+    function temp() {
+      var scopeFnlet = 20;
+    }
+    console.log(scopeFnlet) //블록안에서만 유효
+  </script>
 </body>
 
 </html>
