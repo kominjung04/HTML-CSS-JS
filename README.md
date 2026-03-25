@@ -19,3 +19,14 @@ React + Spring + AWS 풀스택 과정 학습 내용을 정리한 레포입니다
   - 글자 속성
   - background 속성
   - box 속성
+  - float속성
+  - position속성
+  - display속성
+  - css내장함수
+  - animation효과
+  - 반응협 웹
+ 
+- JavaScript
+  - 변수의 선언
+  - 변수의 타입
+  - Operator   
