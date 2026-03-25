@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
+ <!-- Google Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <style></style>
+ <script>
+  </script>
+</head>
+
+<body>
+<h1>자바스크립트 변수의 타입</h1>
+<p>타입과 형변환</p>
+  <a href="/"><span class="material-icons icon">home</span>돌아가기</a>
+  <hr>
+  <h3>변수의 타입</h3>
+  <ol>
+    <li>원시타입(Primitive Type)</li>
+    <span>값 자체가 메모리에 직접 저장, 7가지</span>
+    <ul type = "disc">
+      <li>number: 숫자(정수, 실수), Infinity</li>
+      <script>
+        var score = 100_000; grade = 9.5;
+        console.log(score,typeof(score));
+        console.log(grade,typeof(grade));
+        console.log(Infinity,typeof(Infinity))
+      </script>
+      <li>bigint: 숫자인데 매우 큰 수</li>
+      <script>
+        var bigNumber = 1234567890_123457890_123457890_123457890_123457890_12345789n
+        console.log(bigNumber,typeof(bigNumber));
+      </script>
+      <li>string: 문자열</li>
+      <script>
+        var str = "Hello World!";
+        console.log(str,typeof(str));
+      </script>
+      <li>boolean: True, False</li>
+      <script>
+        var isRight = true; var isCorrect = false;
+        console.log(isRight,typeof(isRight));
+        console.log(isCorrect,typeof(isCorrect));
+      </script>
+      <li>undefined: 값이 초기화 되지 않을 때 값을 출력</li>
+      <script>
+        var varUndefined;
+        console.log("var undefined",varUndefined,typeof(varUndefined));
+        let letUndefined;
+        console.log("let undefinde",letUndefined,typeof(letUndefined));
+      </script>
+      <li>null: 값이 없음을 의도적으로 명시할 때 사용, 타입은 object</li>
+      <script>
+      var x = null;
+      console.log("x null:",x,typeof(x))
+      </script>
+      <li>Symbol: 절대 중복되지 않는 고유한 식별자를 만들 때 사용(ES6)</li>
+      <script>
+        var s = Symbol("HelloWorld!");
+        console.log("s Symbol: ",s,typeof(s));
+      </script>
+    </ul>
+    <li>참조타입(Referenced Type)</li>
+    <span>주소값, 좃에 가면 집합군에 접근</span>
+    <ul type = "disc">
+      <li>object</li>
+      <script>
+        let student = { //객체:속성과 기능
+          name:'고길동',age:10,
+          master: function(){
+            console.log("소드마스터")
+          }
+        }
+        console.log("고길동 소드마스터:",student,typeof(student));
+        student.master();
+      </script>
+      <li>Array</li>
+      <script>
+        let arr = [0,1,2,3,4]
+        console.log("arr: ",arr,typeof(arr))
+      </script>
+      <li>function</li>
+      <script>
+        function add(a,b){
+          return a+b;
+        }
+        console.log("function add:",add,typeof(add))
+      </script>
+      <li>DOM, BOM</li>
+      <script>
+        console.log(typeof(document))
+        console.log(typeof(window))
+      </script>
+      <li>내장 객체(Date, Math,...)</li>
+      <script>
+        const d = new Date();
+        console.log(d,typeof(d))
+      </script>
+    </ul>
+    <li>변수의 형변환</li>
+    <span>var, let, 제어자 없이 선언해도 타입의 변환이 자유롭다.</span>
+    <script>
+      var tot = 100;
+      console.log(tot,typeof(tot));
+      tot = true;
+      console.log(tot,typeof(tot));
+
+      let sum = 100;
+      console.log(tot,typeof(sum));
+      sum = true;
+      console.log(sum,typeof(sum));
+    </script>
+    
+  </ol>
+</body>
+</html>
+
