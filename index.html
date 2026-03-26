@@ -9,15 +9,21 @@
   <script>
   </script>
   <style>
-    div {
-      width: 200px;
-      border: 1px dashed black;
-      display: inline-block;
-      background-color: rgb(141, 165, 233);
-
+    .container {
+      display: flex;
+      justify-content: stretch;
+      gap: 15px;
+      margin-bottom: 30px;
     }
 
-    h2 {
+    .container>div {
+      border: 1px dashed black;
+      border-radius: 15px;
+      flex-grow: 1;
+      flex-basis: 0;
+    }
+
+    h3 {
       text-align: center;
     }
 
@@ -40,41 +46,76 @@
   <a href="/01_html/login.html">로그인</a></li>
   <a href="/01_html/join.html">회원가입</a></li>
   <hr>
-  <div>
-    <h2>HTML Tag</h2>
-    <ol>
-      <li><a href="/01_html/01_text.html">글자 태그</a></li>
-      <li><a href="/01_html/02_image.html">이미지 태그</a></li>
-      <li><a href="/01_html/03_a.html">하이퍼링크 태그</a></li>
-      <li><a href="/01_html/04_list.html">목록 태그</a></li>
-      <li><a href="/01_html/05_table.html">테이블 태그</a></li>
-      <li><a href="/01_html/06_media.html">미디어 태그</a></li>
-      <li><a href="/01_html/07_div_span.html">공간 태그</a></li>
-      <li><a href="/space.html">추가 공간태그</a></li>
-      <li><a href="/01_html/08_semantic.html">semantic 태그</a></li>
-      <li><a href="/01_html/09_form.html">입력 양식 태그</a></li>
-    </ol>
-  </div>
-  <div>
-    <h2>CSS</h2><!-- Inline에 적용한(태그에 직접 적용)스타일이 먼저,style에 적용한것은 맨 마지막에 적용한것이 적용 -->
-    <ol>
-      <li><a href="/02_style/01_기본선택자.html">기본선택자</a></li>
-      <li><a href="/02_style/02_속성선택자.html">속성선택자</a></li>
-      <li><a href="/02_style/03_후손선택자.html">후손선택자</a></li>
-      <li><a href="/02_style/04_동위선택자.html">동위선택자</a></li>
-      <li><a href="/02_style/05_반응선택자.html">반응선택자</a></li>
-      <li><a href="/02_style/06_상태선택자.html">상태선택자</a></li>
-      <li><a href="/02_style/07_구조선택자.html">구조선택자</a></li>
-      <li><a href="/02_style/08_링크선택자.html">링크선택자</a></li>
-      <li><a href="/02_style/09_문자선택자.html">문자선택자</a></li>
-      <li><a href="/02_style/10_부정선택자.html">부정선택자</a></li>
-      <li><a href="/02_style/11_css단위.html">css단위</a></li>
-      <li><a href="/02_style/12_글자속성.html">글자속성</a></li>
-      <li><a href="/02_style/13_background속성.html">background속성</a></li>
-      <li><a href="/02_style/14_box속성.html">box속성</a></li>
-      <li><a href="/02_style/15_float속성.html">float속성</a></li>
-      <li><a href="/02_style/16_display속성.html">displayt속성</a></li>
-    </ol>
+  <div class="container">
+    <div> <!-- HTML TAG -->
+      <h3>HTML Tag</h3>
+      <ol>
+        <li><a href="/01_html/01_text.html">글자 태그</a></li>
+        <li><a href="/01_html/02_image.html">이미지 태그</a></li>
+        <li><a href="/01_html/03_a.html">하이퍼링크 태그</a></li>
+        <li><a href="/01_html/04_list.html">목록 태그</a></li>
+        <li><a href="/01_html/05_table.html">테이블 태그</a></li>
+        <li><a href="/01_html/06_media.html">미디어 태그</a></li>
+        <li><a href="/01_html/07_div_span.html">공간 태그</a></li>
+        <li><a href="/space.html">추가 공간태그</a></li>
+        <li><a href="/01_html/08_semantic.html">semantic 태그</a></li>
+        <li><a href="/01_html/09_form.html">입력 양식 태그</a></li>
+      </ol>
+    </div>
+    <div> <!-- CSS -->
+      <h3>CSS</h3><!-- Inline에 적용한(태그에 직접 적용)스타일이 먼저,style에 적용한것은 맨 마지막에 적용한것이 적용 -->
+      <ol>
+        <li><a href="/02_style/01_기본선택자.html">기본선택자</a></li>
+        <li><a href="/02_style/02_속성선택자.html">속성선택자</a></li>
+        <li><a href="/02_style/03_후손선택자.html">후손선택자</a></li>
+        <li><a href="/02_style/04_동위선택자.html">동위선택자</a></li>
+        <li><a href="/02_style/05_반응선택자.html">반응선택자</a></li>
+        <li><a href="/02_style/06_상태선택자.html">상태선택자</a></li>
+        <li><a href="/02_style/07_구조선택자.html">구조선택자</a></li>
+        <li><a href="/02_style/08_링크선택자.html">링크선택자</a></li>
+        <li><a href="/02_style/09_문자선택자.html">문자선택자</a></li>
+        <li><a href="/02_style/10_부정선택자.html">부정선택자</a></li>
+        <li><a href="/02_style/11_css단위.html">css단위</a></li>
+        <li><a href="/02_style/12_글자속성.html">글자속성</a></li>
+        <li><a href="/02_style/13_background속성.html">background속성</a></li>
+        <li><a href="/02_style/14_box속성.html">box속성</a></li>
+        <li><a href="/02_style/15_float속성.html">float속성</a></li>
+        <li><a href="/02_style/16_position속성.html">position속성</a></li>
+        <li><a href="/02_style/17_display속성.html">display속성</a></li>
+        <li><a href="/02_style/18_display속성_flex.html">display속성_flex</a></li>
+        <li><a href="/02_style/19_shadow_gradient속성.html">shadowGradient속성</a></li>
+        <li><a href="/02_style/20_CSS내장함수.html">CSS내장함수</a></li>
+        <li>css 애니메이션 효과
+          <ul>
+            <li><a href="/02_style/21_animation1.html">실습 1</a></li>
+          </ul>
+          <ul>
+            <li><a href="/02_style/21_animation2.html">실습 2</a></li>
+          </ul>
+          <ul>
+            <li><a href="/02_style/21_animation3.html">실습 3</a></li>
+          </ul>
+        </li>
+        <li><a href="/02_style/22_mobile.html">반응형 웹</a></li>
+        <li><a href="/02_style/23_ex01.html">실습1 - ID 카드</a></li>
+        <li><a href="/02_style/24_ex02.html">실습2 - 네이버 로그인창</a></li>
+      </ol>
+
+    </div>
+    <div> <!-- JavaScript-->
+      <h3>JavaScript</h3>
+      <ol>
+        <li><a href="/03_JS/01_variable.html">변수(variable)의 선언</a></li>
+        <li><a href="/03_JS/02_variable_type.html">변수의 타입</a></li>
+        <li><a href="/03_JS/03_operator_type.html">연산자</a></li>
+        <li><a href="/03_JS/04_condition.html">조건</a></li>
+        <li><a href="/03_JS/05_loop.html">반복문</a></li>
+        <li><a href="/03_JS/06_break_continue.html">반복문</a></li>
+      </ol>
+    </div>
+    <div> <!-- DOM API-->
+      <h3>DOM API</h3>
+    </div>
   </div>
 </body>
 
