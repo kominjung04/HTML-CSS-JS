@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- Google Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <style>
+    table,
+    th,
+    td {
+      border: 1px solid black;
+      border-collapse: collapse;
+      text-align: center;
+      width: 350px;
+
+    }
+  </style>
+  <script>
+  </script>
+</head>
+
+<body>
+  <h1>Processing - operator</h1>
+  <p>연산자</p>
+  <a href="/"><span class="material-icons icon">home</span>돌아가기</a>
+  <hr>
+  <ul>
+    <li>산술연산자(Arithmetic Operator: +, -, *, /, %, **) </li>
+    <script>
+      let result = 1 + 1; result = 1 - 1; result = 1 * 1; result = 1 / 1;
+      result = 10 % 3; result = 2 ** 2;
+      const remain = 10 % 7;
+      const share = 10 / 7;
+      console.log(`몫은 ${Math.floor(share)} , 나머지는 ${remain} `) //Math.floor(소수 삭제)
+      console.log(7 + 7 + "7" + 7 + 7);//숫자 더하다 문자 나올시 문자 나온 뒤로 다 문자로 인식
+      console.log(true + 2 + "참"); // bool 이 숫자를 만나면 ture = 1, false = 0
+      console.log(false + -2 + "거짓")
+      //0을 제외한 숫자 = true, 0 = false = undefined 
+      console.log([] + " world") //[]와 문자열 + 연산할 때 []는 ""(빈문자열)
+    </script>
+    <li>비교연산자(Comparison Operator: ==,&lt;, &gt;, &ge;, &le;, !=, ===, !==) </li>
+    <span>숫자, 문자, 날짜, 논리 등에 대한 비교연산</span>
+    <script>
+      console.log("=== 비교연산자 ===");
+      let n1 = 'A'; let n2 = 'a';
+      console.log(n1 == n2); console.log(n1 === n2); //=== : 타입과 값이 같아야함
+      console.log(n1 > n2); console.log(n1 != n2);
+      console.log(n1.charCodeAt(0));
+      console.log('a'.charCodeAt(0));
+      console.log('0'.charCodeAt(0));
+      console.log(String.fromCharCode(65));
+      console.log(null == undefined); //true
+      console.log(null === undefined); //false
+      console.log(null == ' '); //false
+      console.log(undefined == ' '); //false
+    </script>
+    <li>논리연산자</li>
+    <table>
+      <tr>
+        <th>입력</th>
+        <th> ||(논리합) </th>
+        <th> &&(논리곱) </th>
+      <tr>
+        <td>true ture</td>
+        <td>true</td>
+        <td>ture</td>
+      </tr>
+      <tr>
+        <td>true false</td>
+        <td>ture</td>
+        <td>false</td>
+      </tr>
+      <tr>
+        <td>false ture</td>
+        <td>ture</td>
+        <td>false</td>
+      </tr>
+      <tr>
+        <td>false false</td>
+        <td>false</td>
+        <td>false</td>
+      </tr>
+      </tr>
+    </table>
+    <h4>Truthy Value</h4>
+    <ol>
+      <li>true</li>
+      <li>0을 제외한 정수,실수,Infinity,-Infinity</li>
+      <li>빈문자열("",'')을 제외한 모든 문자열</li>
+      <li>참조형객체(Object, 내장객체, 배열, class)</li>
+      <li>{} 빈 객체,[] 빈 배열</li>
+      <li>fuction()</li>
+      <li>DOM, BOM 사전 정의된 객체들</li>
+    </ol>
+    <h4>Falsy Vlaue</h4>
+    <ol>
+      <li>false</li>
+      <li>undefined, null</li>
+      <li>Nan (Not a number)</li>
+      <li>0, -0</li>
+      <li>"", '' 빈문자열</li>
+      <li>document,all,alert() 반한되는 값이 없어서 undefined가 됨</li>
+    </ol>
+    <script>
+      //&& - 1.falsy값 찾기 -> falsy존재 -> 결과반영
+      //&& - 2.falsy값 찾기 -> falsy존재X -> 마지막 결과 반영
+      //true 와 false로 나눠지는 것이 아닌 truthy와 flasy면 그 값을 반영
+      const b1 = 1 < 2; const b2 = false;
+      console.log("b1 && b2 : ", b1 && b2);
+      console.log("b1 && !b2: ", b1 && !b2);
+      console.log(!b1 && (!b2 || 'A') < 'a'); //비교연산자가 논리 연산자보다 우선순위가 높음
+      //&&논리곱 연산자가 2개 이상일 경우 첫번째 falsy한 값을 반영, 모두 true일 경우 맨 마지막이 값 
+      console.log(!b1 && b2 && ('A' < 'a')); //첫번째 falsy값이 나오면 결과 반영
+      console.log(b1 && !b2 && ('A' < 'a')); //모두가 truthy값이면 맨 끝 결과 반영
+      console.log(1 && -1 && undefined)
+      console.log(0 && null && undefined)
+      console.log("[] && {} && 1: ", [] && {} && 1) //1
+      console.log("[] && {} && 5: ", [] && {} && 5) //1
+      console.log('""&& {} && 1: ', "" && {} && 1) //""(빈문자열)
+      console.log("'&& {} && 1': ", "" && {} && 1) //""(빈문자열)
+      console.log(`"&& {} && 1": `, "" && {} && 1) //""(빈문자열)
+
+      console.log("논리합 연산============")
+      //논리합 - 1.truthy값 찾기 -> truthy값 존재 ->결과반영
+      //논리합 - 2.truthy값 찾기 -> truthy값 존재X ->마지막 결과 반영
+      console.log("[] == false: ", [] == false) //[]가 비교연산자를 만나면 false => true 
+      console.log("{} == false: ", {} == false) //{}가 비교연산자를 만나면 true  => false
+      console.log(`"0" || null || undefined: `, "0" || null || undefined)
+      // ||논리합 연산자가 2개 이상일 때 첫번째 truthy한 값 반영, 모두 falsy일 경우 맨 마지막 값 반영
+      console.log(`0 || null || undefined: `, 0 || null || undefined)
+      console.log(-1 || 0)
+      console.log(-1 && 0)
+      console.log(null || 2 || undefined)
+      console.log(null || 0 || (undefined && 1))
+      console.log(null || -1 || 1)
+      console.log(null || -1 && 1)
+    </script>
+
+    <li>단항 연산자 ( ++, -- )</li>
+    <script>
+      let a = 1;
+      a = a + 1;
+      console.log(a++); //단항연산자가 뒤에 있는 경우 다음 연산에 반영 (후위단항연산자)
+      console.log(++a); //단항연산자가 앞에 있는 겨우 바로 반영 (전위단항연산자)
+      x = 7; y = 3;
+      console.log(x++, ++x + ++y) 
+    </script>
+
+    <li>대입연산자 (=, +=, -= , *=, /= ,%=, **= )</li>
+    <script>
+      let z = 1;
+      z++; z = z + 1; z += 1;
+      z *= 2; //z = z*2
+      let l = 5; let m = 2; let n = 3;
+      l += m++ * --n; //l=9 m=3 n=2
+      m *= l - n++; // l=9 m=21 n=3
+      n = l %= m;// l=9 m=21 n=9
+      console.log(l, m, n)  
+    </script>
+
+    </li>삼항 연산자( 조건?참:거짓 )</li>
+    <script>
+      // var num = prompt("숫자를 입력하세요");
+      // console.log(!isNaN(num)?"숫자가 맞습니다":"숫자가 아닙니다."); //isNaN: 숫자가 아니다.
+      // console.log(num%2==0?"짝수가 맞습니다":"홀수가 맞습니다.");
+      let sum = ((10 % 3 == 0) ? 10 : 20);
+      console.log(sum);
+    </script>
+
+    <li>shift 연산
+      <pre style="display: inline;">( >>, << )</pre>
+    </li>
+    <script>
+      num = 2;
+      console.log(num << 1); // *2
+      console.log(num >> 1);// /2
+    </script>
+
+    <li>bit 연산자 (|, &, ^, ~ )</li>
+    <script>
+      console.log(2 | 1); //3
+      console.log(2 & 1); //0
+      console.log(2 ^ 1); //3
+      console.log(~2); //-3 0010 
+    </script>
+  </ul>
+</body>
+
+</html>
