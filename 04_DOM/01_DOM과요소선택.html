@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
+ <!-- Google Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <style>
+    #box{background-color: pink;}/*style에서 id는 복수개가 있을 때 모두 선택*/
+    
+  </style>
+ <script>
+  window.onload = function(){ //document를 다 실행한후 스크립트 실행
+    var divBox = document.getElementById('box'); //id가 복수개 있을 때 첫번째만 선택
+    console.log(typeof(divBox),divBox.textContent) //id는 자바스크립트에서는 하나만 사용
+    var lis = document.getElementsByTagName('li')
+    console.log(typeof(lis))
+     for(item of lis){
+      item.style.background = 'yellow'
+    }
+    var subjects = document.getElementsByClassName('subject')
+    for(let i=0;i<subjects.length;i++){
+      subjects[i].style.color = 'blue'
+    }
+    var box = document.querySelector('#box')
+    box.style.border='1px dashed black'
+    
+    //querySelectorAll :: 복수로 아이디 선택
+    var boxes = document.querySelectorAll('#box')
+    for(let i=0; i<boxes.length;i++){
+      boxes[i].style.color = 'green'
+    }
+    var boxes = document.querySelectorAll('#box')
+    for(box of boxes){
+      box.style.background = 'skyblue'
+    }
+  }
+  </script>
+</head>
+
+<body>
+<h1>DOM(Document Object Model) 문서 객체 모델</h1> 
+<p>document를 다루기 위한 정의된 API(Application Programming Interface)</p>
+  <a href="/"><span class="material-icons icon">home</span>돌아가기</a>
+  <hr>
+  <h3>DOM 요소 선택하기</h3>
+  <ol>
+    <li>id로 선택하기: document.getElementById()</li>
+    <script>
+      //const boxes = document.getElementById('box')
+      // console.log(boxes.textContent) document 전체가 읽혀지지 않은 상태
+    </script>
+    <li>태그로 선택하기: document.getElementsByTagName()</li>
+    <li>class로 선택하기: document.getElementsByClassName()</li>
+    <li>CSS의 선택자로 선택하기(단수): document.QuerySelector()</li>
+    <li>CSS의 선택자로 선택하기(복수): document.QuerySelectorAll()</li>
+  </ol>
+
+  <h3 id="box" class="subject">Title</h3>
+  <div id="box" class="subject">Box</div>
+</body>
+</html>
+
