@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
+ <!-- Google Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <style></style>
+ <script>
+  </script>
+</head>
+
+<body>
+<h1>함수(function) :: 같은 이름으로 여러개의 기능 지정 가능 </h1> 
+<p>함수는 처리의 집합된 단위, 궁극적 목적은 재사용</p>
+  <a href="/"><span class="material-icons icon">home</span>돌아가기</a>
+  <hr>
+ <ol>
+  <li>함수의 선언</li>
+  <script>
+    fnc();
+    function fnc(){
+      console.log("원형함수")
+    }
+    console.log(fncVar); //undefined
+    var fncVar = function (){
+      console.log("fncVar익명함수")
+    }
+    fncVar(); 
+  </script>
+
+
+  <li>함수의 유형</li>
+  <ul>
+    <li>매개변수 X, 반환값 X</li>
+    <script>
+      console.log("===매개변수 X, 반환값 X===")
+      function hello(){
+        console.log("Hello World")
+        //return이 없지만,함수 내부적으로 return;존재, 생략되어 있음
+      }
+      hello();
+      //fncVar(); //fncVar함수는 선언이 호이스팅되지 않아서, 에러발생
+      var fncVar = function (){
+        console.log("hello world")
+      }
+      fncVar();
+    </script>
+
+    <li>매개변수 O, 반환값 X</li>
+    <script>
+      console.log("===매개변수 O, 반환값 X===")
+      function hello(name) {
+        console.log(`hello${name}`)
+      }
+      hello("소드마스터 고길동")
+      
+      var fncVar = function (name){
+        console.log(`hello${name}`)
+      }
+      fncVar("둘리")
+    </script>
+
+    <li>매개변수 X, 반환값 O</li>
+    <script>
+      console.log("===매개변수 X, 반환값 O===")
+      function hello() {
+        return "hello world"
+      }
+      hello()//return 후 작동될 코드가 없음
+      var tmp = hello() //함수의 리턴값을 한번이상 사용할 경우 변수로 받는게 효율적
+      console.log(tmp)
+      console.log(hello()) //리턴값을 한번만 사용할 경우 직접 매개변수로 적용
+      
+      var fncVar = function (){
+        return "hello world"
+      }
+      console.log(fncVar())
+    </script>
+
+    <li>매개변수 O, 반환값 O</li>
+    <script>
+      console.log("===매개변수 O, 반환값 O===")
+      function hello(name) {
+        return `hello${name}`
+      }
+      hello("고길동")
+      var tmp = hello("고길동") 
+      console.log(tmp)
+      console.log(hello("고길동")) 
+
+      var fncVar = function (name){
+        return `hello${name}`
+      }
+      console.log(fncVar("둘리"))
+      var sum = function(a,b,c,d){return a + b + c + d;} //가능
+      var sum = function(a,b,c){return a + b + c + d;} //에러
+    </script>
+  </ul>
+
+
+  <li>매개변수에 따른 함수의 유형</li>
+  <script>
+    console.log("===매개변수에 따른 함수의 유형===")
+    function myFnc(a, b){// 매개변수에 var, let, const 사용 불가
+      console.log(a+b)
+    }
+    // console.log(a) //매개변수는 함수 영역 또는 함수 영역(scope)이기 때문에 외부에서 접근 불가
+    myFnc(1,1)
+    myFnc(true,false)
+    myFnc("hello","world")
+    myFnc(true,1)
+    myFnc([],1) //[]와 문자열 + 연산할때 []는 ""(빈문자열)로 변환되어서 결과는 "1"
+    myFnc(1,1,1,1,1) //초과된 매개변수 무시
+    console.log("... : spread operator 전개 연산자")
+    var arr1 = [1,2];arr2 = [3,4];
+    var arr3 = [...arr1,...arr2] //전개 연산자로 매개변수를 combined
+    console.log(arr3)
+    var sum = function(a,b,c,d){return a+b+c;}
+    console.log(sum(...arr3))
+    
+    console.log("... : rest parameter 나머지 매개변수")
+    function sumAll(...nums){
+      tot = 0;
+      for(let i = 0 ; i <nums.length;i++){
+        tot += nums[i]
+      }
+      console.log (tot);
+    }
+    sumAll(1,2); sumAll(1,2,3,4,5,6,7,8,9,10);sumAll(); // 3 55 0
+    function myFnc2(a,b,...args){
+      console.log(a,b,args.toString())
+    }
+    myFnc2(1, 2);myFnc2(1,2,3,4,5); //OK
+    myFnc2(); //undefind,undefind,''
+    // function myFnc3(...args,a,b){}//사용불가,나머지 매개변수는 반드시 끝에 있어야 함.
+  </script>
+
+
+  <li>익명함수(Anonymous Function) or 함수 표현식(fuction Expression)</li>
+  <p>익명함수는 함수 이름이 없다. 함수 표현식은 익명함수를 변수에 할당</p>
+  <script>
+    // 함수 호이스팅 안됨, 변수이기 때문
+    let anonymousFc = function(){
+      console.log("익명함수이자 함수표현식입니다.")
+    }
+  </script>
+  
+  <li>closure 현상 :: 지역변수가 {} 밖에서도 사용 가능한 현상</li>
+  <script>
+    function multiplier(x) {
+      return function(y){
+        return x * y;
+      }
+    }
+    const mVar = multiplier(2)
+    console.log(mVar(2));
+  </script>
+
+
+  <li>Callback :: 함수의 매개변수로 넘어가는 함수.나중에 불림, 익명함수</li>
+  </ol>
+
+</body>
+</html>
+
