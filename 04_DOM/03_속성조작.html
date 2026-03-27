@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
+ <!-- Google Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <style></style>
+  <script src="/JS/script.js"></script> <!-- js외부 파일 -->
+ <script>
+  window.onload = function(){
+    const clock = document.querySelector("#clock")
+    clock.textContent = now()
+    //시간 흐르게 
+    setInterval(function(){
+      clock.textContent = now()
+    },1000
+   )
+   const img = document.querySelector('#image')
+   //setAttribute(속성,값),getAttribut(속성)
+   img.setAttribute('src',img.getAttribute('data-url') + "/200x100")
+   img.removeAttribute('data-url') //속성 삭제
+   img.hasAttribute('alt') //속성이 있는지
+  }
+  </script>
+</head>
+
+<body>
+<h1>글자조작</h1> 
+<p>setAttribute(), getAttribute(), removeAttribute(), hasAttribute()</p>
+  <a href="/"><span class="material-icons icon">home</span>돌아가기</a>
+  <hr>
+  <h2 id="clock"></h2>
+  <img data-url="http://placehold.co" id="image" alt="image">
+</body>
+</html>
+
