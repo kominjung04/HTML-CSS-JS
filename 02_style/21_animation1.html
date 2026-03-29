@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>position속성</title>
+  <!--웹 폰트를 html에 적용할 때-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <style>
+    .box{
+      width: 100px;
+      height: 100px;
+      background-color: skyblue;
+      position: relative;
+      animation-name:moveBox;
+      animation-duration:1s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+    }
+    @keyframes moveBox{
+      from{
+        left: 0;
+      } to {
+        left:300px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <h1>CSS animation 효과주기 1</h1>
+  <p>@keyframes, from {} to {} 활용</p>
+  <a href="/"><span class="material-icons icon">home</span>돌아가기</a>
+  <hr>
+  <div class="box"></div>
+  </body>
+
+</html>

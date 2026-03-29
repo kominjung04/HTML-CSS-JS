@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>display속성</title>
+  <!--웹 폰트를 html에 적용할 때-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <style>
+    fieldset {
+      display: inline;
+    }
+
+    .outer {
+      width: 150px;
+      height: 150px;
+      background-color: aquamarine;
+    }
+
+    .inner {
+      background-color: tomato;
+      width: 60px;
+      height: 60px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>display 속성</h1>
+  <p>none, inline, block, inline-block,table,table-cell,flex</p>
+  <a href="/"><span class="material-icons icon">home</span>돌아가기</a>
+  <a href="/02_style/18_display속성_flex.html">Flexbox 속성</a>
+  <hr>
+  <p>display 속성과 visibility 속성의 비교</p>
+  <div>
+    <button type="button" style="visibility: visible;">visibility:visiblie(default)</button>
+    <button type="button" style="visibility: hidden;">visibility:hidden</button>
+    <button type="button" style="display: inline;">visibility:inline</button>
+    <button type="button" style="display: none;">visibility:none</button>
+    <button type="button" style="display: inline-block;">visibility:inline-block</button>
+    <button type="button" style="display: block;">visibility:block</button>
+  </div>
+  <h4>block 안에 inline 위치 잡기</h4>
+  <fieldset>
+    <legend>block 안에 inline</legend>
+    <div class="outer" style="text-align: center;">
+      <span class="inner" style="line-height: 150px;">inner</span>
+    </div>
+  </fieldset>
+
+  <h4>block 안에 block 위치 잡기</h4>
+  <fieldset>
+    <legend>table-cell 이용하기1</legend>
+    <table style="display: table;" class="outer">
+      <tr>
+        <td style="display: table-cell; text-align: center;vertical-align: middle;">
+          <div class="inner" style="margin: 0 auto;">inner</div>
+        </td>
+      </tr>
+    </table>
+  </fieldset>
+  <fieldset>
+    <legend>table-cell 이용하기2</legend>
+    <div class="outer" style="display: table-cell;vertical-align: middle;">
+      <div class="inner" style="margin: 0 auto;">inner</div>
+    </div>
+  </fieldset>
+  <fieldset>
+    <legend>div in div</legend>
+    <div class="outer" style="position: relative;">
+      <div class="inner" style="position: absolute;top:50%;left:50%;margin-top:-30px;margin-left: -30px;">inner</div>
+    </div>
+  </fieldset>
+  <fieldset>
+    <legend>div in div with flex</legend>
+    <div class="outer" style="display: flex;justify-content: center;align-items: center;">
+      <div class="inner">inner</div>
+    </div>
+  </fieldset>
+  <hr>
+  <h4>연습</h4>
+</body>
+
+</html>

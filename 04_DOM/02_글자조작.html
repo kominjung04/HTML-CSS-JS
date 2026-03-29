@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
+ <!-- Google Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <style></style>
+ <script>
+  window.onload = function(){
+    var output = ''
+    console.log(typeof(output))
+    for(let i=0;i<10;i++){
+      output +=`<h1>Header - ${i}</h1>`
+    }
+    console.log(output) //output확인
+    const headerBox = document.querySelector('#headerBox') //주소값을 변수에저장(상수)
+    // headerBox.textContent = output //글자를 있는 그대로 넣을 때
+    headerBox.innerHTML = output //태그를 적용시켜 글자를 출력할 때
+    headerBox.value = output //입력양식태그가 아니기에 적용X
+    document.querySelector("#txt").value = output //입력양식태그이기에 적용O
+  }
+  </script>
+</head>
+
+<body>
+<h1>글자조작</h1> 
+<p>textContent, innerHTML</p>
+  <a href="/"><span class="material-icons icon">home</span>돌아가기</a>
+  <hr>
+ <div id="headerBox"></div>
+ <input type="text" name="" id="txt">
+</body>
+</html>
+
