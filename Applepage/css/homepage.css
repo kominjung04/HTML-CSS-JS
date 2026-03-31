@@ -1,18 +1,88 @@
 ul{
     list-style-type:none;
     display: flex;
-    justify-content: center;
+    justify-content: center;/*가로(수평)정렬*/
     height: 44px;
-    align-items: center;
-    background-color: black;
-    color: white;
+    align-items: center; /*세로(수직)정렬*/
+    background-color: white;
+    color: black;
+    flex-shrink: 1;
+    margin: 0;
+    padding: 0;
+    
 }
 li{
     padding-left: 10px;
     padding-right: 10px;
     font-size: 12px;
     font-weight: 300;
+    white-space: nowrap;/* 공백과 줄바꿈 처리 normal(기본),nowrap(줄바꿈X),pre(코드처럼 공백/줄바꿈 유지) */
 }
-li:first-child{
+.Iphone{
+    background-color: #f5f5f7;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    
+}
+.learnmore{
+    background-color: #0071e3;
+    color: white;
+    border-radius: 20px;
+    padding: 10px;
+    border: 1px solid #0071e3;
+    width: 100px;
+    margin: ;
+    
+}
+#shopping{
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid #0071e3;
+    color: #0071e3;
+    width: 150px;
+    
+}
+h1,h3{
+    padding: 0px;
+    margin: 10px;
+}
 
+.ipimg{
+    height: 500px;
+    width: 400px;
+}
+
+.MacNeo{
+    background-color: #f5f5f7;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    margin: 10px;
+
+}
+.macimg{
+    height: 400px;
+    width: 500px;
+}
+.buy{
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid #0071e3;
+    color: #0071e3;
+    width: 150px;
+}
+
+.iPadair{
+    background-color: #f5f5f7;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    
 }
