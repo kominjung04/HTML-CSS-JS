@@ -1,6 +1,6 @@
 window.onload = () => {
   let btn  = document.querySelector('.btn')
-  let buy = document.querySelector('.buy')
+  let buy = document.querySelectorAll('.buy')
   btn.onmouseover = () => {
     btn.style.backgroundColor = "#0071e3"
     btn.style.color = "white"
@@ -22,19 +22,6 @@ window.onload = () => {
     buy.style.backgroundColor = "transparent" //색상없음
     buy.style.color = "#0071e3"
     buy.style.cursor = "pointer"
-  }
 
-  var output= '';
-  let Ipad = document.querySelector('.iPadair')
-  for(let i; i< 256 ; i++){
-    output += '<div><div>'
-  }
-  Ipad.innerHTML = output;
-const divs = document.querySelectorAll(".Ipadair>div")
-      for (let i = 0; i < divs.length; i++) {
-        divs[i].style.height="5px"
-        divs[i].style.backgroundColor = `rgb(${i},${i},${i})`
-      }
     }
-  
-
+  }
