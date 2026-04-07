@@ -29,4 +29,25 @@ React + Spring + AWS 풀스택 과정 학습 내용을 정리한 레포입니다
 - JavaScript
   - 변수의 선언
   - 변수의 타입
-  - Operator   
+  - Operator
+  - Condition
+  - loop
+  - break,continue
+  - Array
+  - 함수
+  - 화살표함수
+  -객체
+
+- DOMAPI
+  - DOM과요소선택
+  - 글자조작
+  - 속성조작
+  - style조작
+  - 이벤트다루기
+  - 이벤트_target
+  - 이벤트_onmouse
+  - 이벤트_onchange
+  - 이벤트_onkey
+  - 이벤트_bom
+  - 모달
+  
